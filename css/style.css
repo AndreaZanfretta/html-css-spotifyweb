@@ -313,3 +313,36 @@ margin-right: 15px;
     border: 2px solid #ffffff;
     border-radius: 3px;
 }
+/* media query */
+@media screen and (max-width: 992px){
+    .flex-box{
+        width: calc((100% / 4) - 20px);
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+    h2{
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .flex-box{
+        width: calc((100% / 3) - 20px);
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+    h2{
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 576px){
+    .flex-box{
+        width: calc((100% / 2) - 20px);
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+    h2{
+        font-size: 12px;
+    }
+}
