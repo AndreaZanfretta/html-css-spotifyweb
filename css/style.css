@@ -30,15 +30,20 @@ p{
     font-size: 14px;
     color: #D2D2D2;
 }
+ul{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
 .btn p a{
     position: absolute;
     top: 20px;
-    right: 25px;
+    right: 255px;
     width: 250px;
     vertical-align: middle;
-    text-decoration: none;
     text-align: center;
-    color: white;
     border: 1px solid white;
     border-radius: 20px;
     padding: 10px 20px;
@@ -46,7 +51,9 @@ p{
 }
 /* aside */
 aside{
+    position: relative;
     width: 230px;
+    height: 100%;
     background-color: #000000;
 }
 /* main */
@@ -61,7 +68,7 @@ main{
     width: 100%;
     position: fixed;
     top: 0;
-    left: 0;
+    left: 230px;
     background-color: rgba(0, 0, 0, 0.3);
     z-index:  1000;
 }
@@ -78,8 +85,6 @@ main{
 }
 .main-nav ul li a{
     font-size: 12px;
-    text-decoration: none;
-    color: #D2D2D2;
     text-transform: uppercase;
 }
 .main-played{
@@ -97,7 +102,6 @@ main{
     margin-bottom: 30px;
 }
 .flex-box ul{
-    list-style: none;
     text-align: center;
 }
 .flex-box ul li{
@@ -111,6 +115,100 @@ main{
     width: 100%;
     max-width: 230px;
     border-radius: 50%;
+}
+/* aside */
+.logo{
+    width: 100%;
+    height: 90px;
+}
+.logo img{
+    margin-top: 20px;
+    margin-left: 10px;
+    width: 60%;
+}
+.side-nav{
+    margin-bottom: 20px;
+}
+.side-nav ul{
+    line-height: 30px;
+    margin-left: 15px;
+}
+.side-nav ul img{
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+    filter: brightness(70%);
+}
+.side-nav ul li{
+    margin-bottom: 5px;
+}
+.side-nav ul li a{
+    font-size: 14px;
+    padding-left: 5px;
+    color: #D2D2D2;
+}
+.side-playlist{
+    width: 100%;
+    max-height: 630px;
+    margin-left: 15px;
+    overflow-y: auto;
+    position: relative;
+}
+.side-playlist ul li{
+    padding: 10px 0;
+}
+.side-playlist ul li a{
+    padding: 10px 0;
+    font-size: 14px;
+    color: #D2D2D2;
+}
+.side-playlist ul li .fa-plus{
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    vertical-align: middle;
+    text-align: center;
+    line-height: 30px;
+    color: black;
+    background-color: #D2D2D2;
+}
+.user{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    display: inline-block;
+    margin-top: 90px;
+    padding: 5px 15px;
+    font-size: 14px;
+}
+.user .install{
+    width: 100%;
+    border-bottom: 1px solid white;
+    padding-bottom: 10px;
+}
+.user p{
+    display: inline-block;
+    padding-left: 5px;
+}
+.user p img{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+}
+.user .profile{
+    padding-top: 10px;
+}
+.profile p img{
+    width: 30px;
+    height: 30px;
+    background-color:#696969;
+    border-radius: 50%;
+}
+.profile p{
+    font-weight: bolder;
+    color: white;
 }
 /* footer */
 footer{
