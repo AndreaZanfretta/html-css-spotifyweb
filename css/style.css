@@ -10,6 +10,7 @@
 body{
     background-color: #141922;
     color: white;
+    font-family: 'Montserrat', sans-serif;
 }
 .container{
     height: 100vh;
@@ -20,6 +21,28 @@ body{
     height: calc(100% - 90px);
     background-color: #141922;
     display: flex;
+}
+h1{
+    font-size: 26px;
+    line-height: 45px;
+}
+p{
+    font-size: 14px;
+    color: #D2D2D2;
+}
+.btn p a{
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    width: 250px;
+    vertical-align: middle;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    border: 1px solid white;
+    border-radius: 20px;
+    padding: 10px 20px;
+    text-transform: uppercase;
 }
 /* aside */
 aside{
@@ -51,12 +74,13 @@ main{
 .main-nav ul li{
     display: inline-block;
     text-align: center;
-    padding: 5px 10px;
+    padding: 5px 15px;
 }
 .main-nav ul li a{
-    font-size: 18px;
+    font-size: 12px;
     text-decoration: none;
     color: #D2D2D2;
+    text-transform: uppercase;
 }
 .main-played{
     width: 100%;
@@ -65,10 +89,12 @@ main{
     display: flex;
     flex-flow: row wrap;
     gap: 0 20px;
+    margin-top: 10px;
 }
 .flex-box{
     width: calc((100% / 6) - 20px);
     margin-top: 20px;
+    margin-bottom: 30px;
 }
 .flex-box ul{
     list-style: none;
