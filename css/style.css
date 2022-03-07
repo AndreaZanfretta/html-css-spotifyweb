@@ -219,3 +219,97 @@ footer{
     bottom: 0;
     left: 0;
 }
+.footer-bar{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 10px;
+}
+.side{
+    flex-basis: 30%;
+}
+.center{
+    flex-basis: 40%;
+}
+.track ul{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+.track ul li{
+display: inline-block;
+margin-right: 15px;
+}
+.track .fa-heart, .track .fa-folder{
+    color: #D2D2D2;
+}
+.track ul li h4, .track ul li p{
+    font-size: 14px;
+    margin-right: 20px;
+}
+.track ul li p{
+    font-size: 12px;
+}
+.track ul li img{
+    width: 50px;
+    height: 50px;
+    vertical-align: middle;
+}
+.buttons , .buttons i{
+    text-align: center;
+    font-size: 20px;
+    padding: 0 10px;
+}
+#play{
+    font-size: 26px;
+}
+.track-progress{
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    padding-top: 15px;
+}
+#default-bar{
+    display: inline-block;
+    width: 80%;
+    vertical-align: middle;
+    border: 2px solid #5A5A5A;
+    border-radius: 3px;
+    position: relative;
+}
+#current-bar{
+    position: absolute;
+    bottom: -1px;
+    left: -1px;
+    display: inline-block;
+    width: 20%;
+    vertical-align: middle;
+    border: 2px solid #ffffff;
+    border-radius: 3px;
+}
+.volume-panel{
+    text-align: right;
+    margin-right: 20px;
+}
+
+#volume-default{
+    display: inline-block;
+    width: 20%;
+    vertical-align: middle;
+    border: 2px solid #5A5A5A;
+    border-radius: 3px;
+    position: relative;
+}
+#volume-bar{
+    position: absolute;
+    bottom: -1px;
+    left: -1px;
+    display: inline-block;
+    width: 30%;
+    vertical-align: middle;
+    border: 2px solid #ffffff;
+    border-radius: 3px;
+}
