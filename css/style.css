@@ -3,3 +3,95 @@
     padding: 0;
     box-sizing: border-box;
 }
+/* Generali */
+.debug{
+    border: 1px solid white;
+}
+body{
+    background-color: #141922;
+    color: white;
+}
+.container{
+    height: 100vh;
+    width: 100%;
+}
+.main-container{
+    width: 100%;
+    height: calc(100% - 90px);
+    background-color: #141922;
+    display: flex;
+}
+/* aside */
+aside{
+    width: 230px;
+    background-color: #000000;
+}
+/* main */
+main{
+    width: calc(100% - 230px);
+    padding: 0 30px;
+    padding-top: 100px;
+    overflow-y: auto;
+}
+.overlay-nav{
+    height: 90px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index:  1000;
+}
+.main-nav ul{
+    list-style: none;
+    text-align: center;
+    margin-bottom: 30px;
+    max-width: 100%;
+}
+.main-nav ul li{
+    display: inline-block;
+    text-align: center;
+    padding: 5px 10px;
+}
+.main-nav ul li a{
+    font-size: 18px;
+    text-decoration: none;
+    color: #D2D2D2;
+}
+.main-played{
+    width: 100%;
+}
+.flex-row{
+    display: flex;
+    flex-flow: row wrap;
+    gap: 0 20px;
+}
+.flex-box{
+    width: calc((100% / 6) - 20px);
+    margin-top: 20px;
+}
+.flex-box ul{
+    list-style: none;
+    text-align: center;
+}
+.flex-box ul li{
+    padding: 5px 0;
+}
+.flex-box ul li img{
+    width: 100%;
+    max-width: 230px;
+}
+.main-popular .flex-box ul li img{
+    width: 100%;
+    max-width: 230px;
+    border-radius: 50%;
+}
+/* footer */
+footer{
+    height: 90px;
+    width: 100%;
+    background-color: #282828;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
