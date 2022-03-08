@@ -4,6 +4,16 @@
     box-sizing: border-box;
 }
 /* Generali */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
 .debug{
     border: 1px solid white;
 }
@@ -69,6 +79,7 @@ main{
     left: 230px;
     background-color: rgba(0, 0, 0, 0.3);
     z-index:  1000;
+    overflow-x: hidden;
 }
 .main-nav ul{
     list-style: none;
@@ -114,23 +125,37 @@ main{
 }
 
 .flex-box ul li{
-    padding: 5px 0;
     position: relative;
+    width: 100%;
 }
 .flex-box ul li img{
     width: 100%;
+    height: 100%;
+    object-fit: cover;
     max-width: 230px;
+}
+.main-popular ul li:first-child{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    border-radius: 50%;
+    overflow: hidden;
 }
 .main-popular .flex-box ul li img{
     width: 100%;
+    height: 100%;
     max-width: 230px;
     border-radius: 50%;
+    object-fit: cover;
+    transition: transform 1s;
+}
+.main-popular .flex-row .flex-box > ul > li > img:hover{
+    transform: scale(1.1, 1.1);
 }
 .overlay{
     height: 100%;
     width: 100%;
     position: absolute;
-    padding: 5px 0;
     top: 0;
     left: 0;
     background-color: rgba(0, 0, 0, 0.4);
@@ -239,10 +264,19 @@ aside{
     color: black;
     background-color: #D2D2D2;
 }
+.playlist-head:hover ul li > i{
+    background-color: white;
+}
+.playlist-head:hover ul li > a{
+    color: white;
+}
+.playlist-head ul li:hover{
+    background-color: #141922;
+}
 .user{
     position: relative;
     width: 100%;
-    top: 0;
+    bottom: 0;
     left: 0;
     display: inline-block;
     padding: 5px 15px;
@@ -256,6 +290,10 @@ aside{
 .user p{
     display: inline-block;
     padding-left: 5px;
+    cursor: pointer;
+}
+.user p:hover{
+    color: white;
 }
 .user p img{
     display: inline-block;
@@ -311,6 +349,10 @@ margin-right: 15px;
 }
 .track .fa-heart, .track .fa-folder{
     color: #D2D2D2;
+    cursor: pointer;
+}
+.track .fa-heart:hover, .track .fa-folder:hover{
+    color: white;
 }
 .track ul li h4, .track ul li p{
     font-size: 14px;
@@ -318,6 +360,10 @@ margin-right: 15px;
 }
 .track ul li p{
     font-size: 12px;
+    cursor: pointer;
+}
+.track ul li p:hover{
+    text-decoration: underline;
 }
 .track ul li img{
     width: 50px;
@@ -331,6 +377,10 @@ margin-right: 15px;
 }
 #play{
     font-size: 26px;
+    transition: all 0.5s;
+}
+#play:hover{
+    transform: scale(1.1);
 }
 .track-progress{
     width: 100%;
@@ -354,7 +404,33 @@ margin-right: 15px;
     width: 20%;
     vertical-align: middle;
     border: 2px solid #ffffff;
+    cursor: pointer;
     border-radius: 3px;
+    transition: all 0.2s;
+}
+.circle{
+    position: absolute;
+    left: 18%;
+    bottom: -7px;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-color: #D2D2D2;
+    border-radius: 50%;
+    opacity: 0;
+    cursor: pointer;
+}
+#default-bar:hover  .circle{
+    opacity: 1;
+}
+#default-bar:hover #current-bar{
+    border-color: lightgreen;
+}
+#current-bar:hover + .circle{
+    opacity: 1;
+}
+#current-bar:hover{
+    border-color: lightgreen;
 }
 .volume-panel{
     text-align: right;
@@ -378,6 +454,20 @@ margin-right: 15px;
     vertical-align: middle;
     border: 2px solid #ffffff;
     border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+#volume-default:hover #volume-bar{
+    border-color: lightgreen;
+}
+#volume-default:hover .circle{
+    opacity: 1;
+}
+#volume-bar:hover{
+    border-color: lightgreen;
+}
+#volume-bar:hover + .circle{
+    opacity: 1;
 }
 /* media query */
 @media screen and (max-width: 992px){
@@ -464,8 +554,6 @@ margin-right: 15px;
     }
     .user{
         position: absolute;
-        top: 630px;
-        left: 0;
     }
     .user .install p:last-child, .user .profile p:last-child{
         display: none;
