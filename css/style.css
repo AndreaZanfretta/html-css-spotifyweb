@@ -35,12 +35,12 @@ ul{
 }
 a{
     text-decoration: none;
-    color: white;
+    color: rgb(165, 165, 165);
 }
 .btn p a{
     position: absolute;
     top: 20px;
-    right: 255px;
+    right: 275px;
     width: 250px;
     vertical-align: middle;
     text-align: center;
@@ -48,14 +48,12 @@ a{
     border-radius: 20px;
     padding: 10px 20px;
     text-transform: uppercase;
+    transition: all 1s;
 }
-/* aside */
-aside{
-    position: relative;
-    width: 230px;
-    height: calc(100vh - 90px);
-    background-color: #000000;
+.btn p a:hover{
+    transform: scale(1.1, 1.1);
 }
+
 /* main */
 main{
     width: calc(100% - 230px);
@@ -82,6 +80,16 @@ main{
     display: inline-block;
     text-align: center;
     padding: 5px 15px;
+    position: relative;
+}
+.main-nav ul li:hover{
+    background: #202836;
+    border-radius: 20px;
+}
+.main-nav ul li a:hover{
+    border-bottom: 2px solid lightgreen;
+    border-radius: 2px;
+    color: white;
 }
 .main-nav ul li a{
     font-size: 12px;
@@ -104,8 +112,10 @@ main{
 .flex-box ul{
     text-align: center;
 }
+
 .flex-box ul li{
     padding: 5px 0;
+    position: relative;
 }
 .flex-box ul li img{
     width: 100%;
@@ -116,7 +126,36 @@ main{
     max-width: 230px;
     border-radius: 50%;
 }
+.overlay{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    padding: 5px 0;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    cursor: pointer;
+    transition: all 1s ease-in-out;
+}
+.overlay .fa-circle-play{
+    font-size: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.flex-box:hover .overlay{
+    opacity: 1;
+}
 /* aside */
+aside{
+    position: relative;
+    width: 230px;
+    height: calc(100vh - 90px);
+    background-color: #000000;
+    overflow-y: hidden;
+}
 .small-logo{
     position: absolute;
     top: 0;
@@ -164,7 +203,7 @@ main{
 .side-playlist{
     width: 100%;
     height: calc(100% - 365px);
-    margin-left: 15px;
+    padding-left: 15px;
     overflow-y: auto;
 }
 .side-playlist ul li, .playlist-head ul li{
