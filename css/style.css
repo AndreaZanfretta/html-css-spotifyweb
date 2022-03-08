@@ -53,7 +53,7 @@ a{
 aside{
     position: relative;
     width: 230px;
-    height: 100%;
+    height: calc(100vh - 90px);
     background-color: #000000;
 }
 /* main */
@@ -117,7 +117,18 @@ main{
     border-radius: 50%;
 }
 /* aside */
-.logo{
+.small-logo{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.small-logo img{
+    height: 41px;
+    margin-top: 20px;
+    margin-left: 10px;
+    display: none;
+}
+.logo, .small-logo{
     width: 100%;
     height: 90px;
 }
@@ -147,22 +158,24 @@ main{
     padding-left: 5px;
     color: #D2D2D2;
 }
+.playlist-head{
+    margin-left: 15px;
+}
 .side-playlist{
     width: 100%;
-    max-height: 630px;
+    height: calc(100% - 365px);
     margin-left: 15px;
     overflow-y: auto;
-    position: relative;
 }
-.side-playlist ul li{
+.side-playlist ul li, .playlist-head ul li{
     padding: 10px 0;
 }
-.side-playlist ul li a{
+.side-playlist ul li a, .playlist-head ul li a{
     padding: 10px 0;
     font-size: 14px;
     color: #D2D2D2;
 }
-.side-playlist ul li .fa-plus{
+.playlist-head ul li .fa-plus{
     width: 30px;
     height: 30px;
     font-size: 20px;
@@ -173,12 +186,11 @@ main{
     background-color: #D2D2D2;
 }
 .user{
-    position: absolute;
+    position: relative;
     width: 100%;
-    bottom: 0;
+    top: 0;
     left: 0;
     display: inline-block;
-    margin-top: 90px;
     padding: 5px 15px;
     font-size: 14px;
 }
@@ -325,7 +337,7 @@ margin-right: 15px;
     }
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 786px){
     .flex-box{
         width: calc((100% / 3) - 20px);
         margin-top: 20px;
@@ -333,6 +345,15 @@ margin-right: 15px;
     }
     h2{
         font-size: 14px;
+    }
+    .side{
+        flex-basis: 25%;
+    }
+    .center{
+        flex-basis: 50%;
+    }
+    #default-bar{
+        width: 70%;
     }
 }
 
@@ -345,4 +366,76 @@ margin-right: 15px;
     h2{
         font-size: 12px;
     }
+    main{
+        width: calc(100% - 60px);
+        padding: 0 30px;
+        padding-top: 100px;
+        overflow-y: auto;
+    }
+    .overlay-nav{
+        height: 90px;
+        width: 100%;
+        min-width: 350px;
+        position: fixed;
+        top: 0;
+        left: 60px;
+        background-color: rgba(0, 0, 0, 0.3);
+        z-index:  1000;
+    }
+    .overlay-nav .btn p a{
+        right: 90px;
+    }
+    aside{
+        width: 60px;
+        position: relative;
+    }
+    .logo{
+        display: none;
+    }
+    .small-logo{
+        position: relative;
+        height: 50px;
+    }
+    .small-logo img{
+        display: block;
+    }
+    .side-playlist{
+        display: none;
+    }
+    .side-nav ul li a{
+        display: none;
+    }
+    .playlist-head{
+        display: none;
+    }
+    .user{
+        position: absolute;
+        top: 630px;
+        left: 0;
+    }
+    .user .install p:last-child, .user .profile p:last-child{
+        display: none;
+    }
+    .user .profile p{
+        padding-left: 0px;
+    }
+    .footer-bar{
+        min-width: 430px;
+    }
+    .track ul li{
+        margin-right: 2px;
+    }
+    .volume-panel .fa-desktop, .fa-volume-high, .track ul li:last-child, .track ul li:nth-last-child(2){
+        display: none;
+    }
+    #volume-default{
+        display: none;
+    }
+    .side{
+        flex-basis: 10%;
+    }
+    .center{
+        flex-basis: 80%;
+    }
 }
+
