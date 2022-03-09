@@ -79,7 +79,7 @@ main{
     left: 230px;
     background-color: rgba(0, 0, 0, 0.3);
     z-index:  1000;
-    overflow-x: hidden;
+    margin-right: 10px;
 }
 .main-nav ul{
     list-style: none;
@@ -97,10 +97,22 @@ main{
     background: #202836;
     border-radius: 20px;
 }
-.main-nav ul li a:hover{
-    border-bottom: 2px solid lightgreen;
+.underline{
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 4px;
+    background-color: #141922;
     border-radius: 2px;
+}
+.main-nav ul li:hover > a{
     color: white;
+}
+.main-nav ul li:hover > .underline{
+    background-color: lightgreen;
 }
 .main-nav ul li a{
     font-size: 12px;
@@ -141,6 +153,11 @@ main{
     border-radius: 50%;
     overflow: hidden;
 }
+.main-popular .flex-box ul li{
+    max-width: 230px;
+    max-height: 230px;
+    margin: 0 auto;
+}
 .main-popular .flex-box ul li img{
     width: 100%;
     height: 100%;
@@ -155,9 +172,11 @@ main{
 .overlay{
     height: 100%;
     width: 100%;
+    max-width: 230px;
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     background-color: rgba(0, 0, 0, 0.4);
     opacity: 0;
     cursor: pointer;
@@ -204,9 +223,10 @@ aside{
 .side-nav{
     margin-bottom: 20px;
 }
+
 .side-nav ul{
     line-height: 30px;
-    margin-left: 15px;
+    
 }
 .side-nav ul img{
     width: 30px;
@@ -217,6 +237,11 @@ aside{
 .side-nav ul li{
     margin-bottom: 5px;
     border-right: 2px solid #000000;
+    border-left: 4px solid rgb(0, 0, 0);
+    border-radius: 2px;
+}
+.side-nav ul li img{
+    margin-left: 11px;
 }
 .side-nav ul li a{
     font-size: 14px;
@@ -225,8 +250,7 @@ aside{
 }
 .side-nav ul li:hover{
     background-color: #141922;
-    border-left: 2px solid lightgreen;
-    border-radius: 2px;
+    border-left-color: lightgreen;
 }
 .side-nav ul li:hover > a{
     color: rgb(255, 255, 255);
@@ -538,7 +562,7 @@ margin-right: 15px;
     }
     .small-logo{
         position: relative;
-        height: 50px;
+        height: 70px;
     }
     .small-logo img{
         display: block;
