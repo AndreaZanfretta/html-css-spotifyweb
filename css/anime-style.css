@@ -126,7 +126,7 @@ main{
     border-radius: 50%;
     margin: 20px 25px;
     z-index: 1000;
-    
+    cursor: pointer;
 }
 .btn-play{
     display: inline-block;
@@ -135,14 +135,14 @@ main{
     padding: 5px 15px;
     margin: 20px 25px;
     z-index: 1000;
-    
+    cursor: pointer;
 }
 .player .fa-ellipsis{
     display: inline-block;
     font-size: 30px;
     margin: 20px 25px;
     z-index: 1000;
-    
+    cursor: pointer;
 }
 .playlist-container{
     margin: 10px 22px;
@@ -158,9 +158,27 @@ main{
     align-items: center;
     gap: 0 10px;
 }
+.row:hover{
+    background-color: #1c2430;
+}
+.row:hover .fa-play, .row:hover .fa-heart, .row:hover .fa-ellipsis{
+    opacity: 1;
+}
+.row:hover .order p{
+    opacity: 0;
+}
 .order{
     flex-basis: 5%;
     text-align: center;
+    position: relative;
+}
+.order .fa-play{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    cursor: pointer;
 }
 .song-name{
     flex-basis: 50%;
@@ -181,6 +199,17 @@ main{
 }
 .duration{
     flex-basis: 10%;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0 15px;
+}
+.duration .fa-heart{
+    opacity: 0;
+}
+.duration .fa-ellipsis{
+    opacity: 0;
 }
 /* aside */
 aside{
