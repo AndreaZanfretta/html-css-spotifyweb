@@ -131,6 +131,10 @@ main{
     width: calc((100% / 6) - 20px);
     margin-top: 20px;
     margin-bottom: 30px;
+    padding: 0 10px;
+    padding-top: 10px;
+    background-color: #181e29;
+    border-radius: 20px;
 }
 .flex-box ul{
     text-align: center;
@@ -140,11 +144,28 @@ main{
     position: relative;
     width: 100%;
 }
+.flex-box ul li > h2{
+    display: -webkit-box;
+    overflow: hidden;
+    max-width: 315px;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.flex-box ul li > p{
+    display: -webkit-box;
+    overflow: hidden;
+    max-width: 315px;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
 .flex-box ul li img{
     width: 100%;
     height: 100%;
     object-fit: cover;
     max-width: 230px;
+    border-radius: 20px;
 }
 .main-popular ul li:first-child{
     width: 100%;
@@ -180,6 +201,7 @@ main{
     transform: translate(-50%, -50%);
     background-color: rgba(0, 0, 0, 0.4);
     opacity: 0;
+    border-radius: 20px;
     cursor: pointer;
     transition: all 1s ease-in-out;
 }
@@ -496,7 +518,7 @@ margin-right: 15px;
     opacity: 1;
 }
 /* media query */
-@media screen and (max-width: 992px){
+@media screen and (max-width: 1024px){
     .flex-box{
         width: calc((100% / 4) - 20px);
         margin-top: 20px;
