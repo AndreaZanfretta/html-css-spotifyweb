@@ -68,6 +68,7 @@ a{
 main{
     width: calc(100% - 230px);
     overflow-y: auto;
+    background: linear-gradient(180deg, rgb(178 138 130) 0%, rgba(255,163,34,0) 90%, rgba(0,0,0,0.5) 100%)
 }
 .overlay-nav{
     height: 90px;
@@ -87,8 +88,6 @@ main{
     background-size: cover;
     background-attachment: fixed;
     position: relative;
-    -webkit-box-shadow: 50px 50px 31px 50px rgb(101 109 135 / 45%), 50px 50px 31px 50px rgb(171 107 90 / 69%);; 
-    box-shadow: 50px 50px 31px 50px rgb(101 109 135 / 45%), 50px 50px 31px 50px rgb(171 107 90 / 69%);
 }
 .banner-overlay{
     background-color: rgba(0, 0, 0, 0.3);
@@ -103,6 +102,7 @@ main{
     position: absolute;
     bottom: 50px;
     left: 40px;
+    cursor: default;
 }
 .banner-text h1{
     font-size: 60px;
@@ -207,7 +207,7 @@ main{
     gap: 0 10px;
 }
 .row:hover{
-    background-color: #1c2430;
+    background-color: #1c24306e;
 }
 .row:hover .fa-play, .row:hover .fa-heart, .row:hover .fa-ellipsis{
     opacity: 1;
@@ -247,9 +247,11 @@ main{
     display: inline-block;
     color: white;
     padding: 0 10px;
+    cursor: default;
 }
 .listening{
     flex-basis: 35%;
+    cursor: default;
 }
 .duration{
     flex-basis: 10%;
@@ -258,12 +260,14 @@ main{
     justify-content: space-between;
     align-items: center;
     gap: 0 15px;
+    cursor: default;
 }
 .duration .fa-heart{
     opacity: 0;
 }
 .duration .fa-ellipsis{
     opacity: 0;
+    padding-right: 10px;
 }
 /* aside */
 aside{
